@@ -1,0 +1,185 @@
+<?php
+    // integer1.Uzunlik berilgan uni metrlarda ifodalang .
+    $length = 116622;
+    echo $length." metr = ".floor($length / 100)." cm\n";
+    
+    // integer2.Og`irlik berilgan tonnalarda ifodalang .
+    $kilo = 662211;
+    echo $kilo." tonna = ".floor($kilo / 1000)." tonna\n";
+
+    // integer3.Fayl hajmi baytlarda berigan uni kilobaytlarga ifodalash .
+    $bayt = 226611;
+    echo ".$bayt." bayt = ".floor($bayt / 1024)." kb\n";
+    
+    // integer4.A va B  sonlar berilgan . kesmani necha marta joylashtirish kerak.
+    $a = 100;
+    $b = 16;
+    echo .floor($a / $b)." times \n";
+    
+    // integer5.A va B musbat son berilgan. Kesma joylashmagan qismi to`plamini toping
+    $a = 100;
+    $b = 16;
+    echo $a % $b." residual \n";
+    
+    // integer6.ikki xonali son berilgan o`nliklar xonasi, birliklar xonasini chiqaring.
+    $a = 96;
+    echo $a.", ".floor($a / 10).", ".$a % 10;
+    
+    // integer7.ikki xonali son berilgan raqamlari yig`indisini toping
+    $a = 61;
+    echo $a.", ".floor($a / 10) + $a % 10;
+
+    // integer8.ikki xonali son berilgan raqmlarini o`rnini almashtiring
+    $a = 36;
+    $b = $a % 10 * 10 + floor($a / 10);
+    echo $a.", ".$b;
+   
+    // integer9.uch xonali son berilgan yuzlar xonasidagi raqmni aniqlang
+    $a = 826;
+    echo $a." first digit = ".floor($a / 100);
+
+    // integer10.uch xonali son berilgan  uni xona birliklarini chiqaruvchi dastur tuzing
+    $a = 826;
+    echo $a.", ".floor($a % 100 / 10).", ".($a % 10);
+?>
+
+
+<?php
+    // if1.Musbat son bo`lsa 1 ga oshsin aks holda o`zgarmasin.
+    $a = 87;
+    if ($a > 0) 
+        $a++;
+    echo $a;
+    
+    // if2.Musbat son bo`lsa 1 ga oshsin aks holda 2 ga kamaysin.
+    $a = -87;
+    echo "\n ".($a > 0 ? ++$a : $a-2);
+
+    // if3.Musbat son bo`lsa 1 ga oshsin manfiy bo`lsa 2 ga kamaysin 0 bo`lsa 10 ga tenglashsin.
+    $a = -16;
+    if($a == 0){
+        $a = 10;
+    }else{
+        $a = $a < 0 ? $a - 2 : $a + 1;
+    }
+    echo "\n ".$a;
+    
+    // if4.Uchta son berilgan nechtasi musbat ekanligini aniqlang
+    $a = 3;
+    $b = 4;
+    $c = -6;
+    $count = 0;
+    if($a >= 0){
+        $count ++;
+    }
+    if($b >= 0){
+        $count ++;
+    }
+    if($c >= 0){
+        $count ++;
+    }
+    echo "\n ".$count;
+    
+    // if5.Uchta son berilgan musbat va manfiy sonlarni aniqlang.
+    $a = 3;
+    $b = 4;
+    $c = -6;
+    $count = 0;
+    if($a >= 0){
+        $count ++;
+    }
+    if($b >= 0){
+        $count ++;
+    }
+    if($c >= 0){
+        $count ++;
+    }
+    echo "\n ".$count.", ". 3 - $count;
+    
+    // if6.Ikkita butun son berilgan kattasini aniqlang.
+    $a = 202;
+    $b = 18;
+    echo "\n ".($a < $b ? $b : $a);
+    
+    // if7.Ikkita butun son berilgan kichigini aniqlang.
+    $a = 2;
+    $b = 18;
+    echo "\n ".($a < $b ? $b.", ikkinchi son" : $a.", birinchi son"); 
+ 
+    // if8.Ikkita butun son berilgan avval kattasini keyin kichigini chiqaring.
+    $a = 202;
+    $b = 18;
+    echo "\n ".($a < $b ? $b.", ".$a : $a.", ".$b); 
+    
+    // if9.A va B haqiqiy sonlar berilgan A kichik B katta bo`lsin . 
+    $a = 202;
+    $b = 18;
+    if($a > $b){
+        $c = $a;
+        $a = $b;
+        $b = $c;
+    }
+    echo "\n ".$a.", ".$b;
+
+    // if10.A va B butun sonlari berilgan . O`zgaruvchilar teng bolsa yig`indisi chiqarilsin . Teng bo`lsa 0 chiqsin .
+    $a = 55;
+    $b = 55;
+    $a == $b ? $a = $b = $a + $b : $a = $b = 0;
+    echo "\n ".$a.", ".$b;
+?>
+
+
+<?php
+    // begin1.Kvadrat tomoni berilgan . Uni perimetri aniqlansin. 
+    $a = 24;
+    $perimeter = 4 * $a;
+    echo "\n ".$perimeter;
+    
+    // begin2.Kvadrat tomoni berilgan . Uni yuzasini toping .
+    $s = $a**2;
+    echo "\n ".$s;
+    
+    // begin3.To`rtburchak tomonlari berilgan uni yuzasi va perimetrini aniqlang.
+    $x = 10;
+    $y = 20;
+    $s = $x * $y;
+    $p = 2 * ($x + $y);
+    echo "\n ".$s.", ".$p;
+    
+    // begin4.Aylananing diametri berilgan uning uzunligini aniqlang .
+    define("pi", 3.14);
+    $diameter = 10;
+    echo "\n ".$diameter * pi;
+    
+    // begin5.Kubning yon tomoni berilgan uni hajmi va sirtini toping
+    $cube = 16;
+    $volume = $cube**3;
+    $full_surface = 6 * $cube**2;
+    echo "\n ".$volume.", ".$full_surface;
+    
+    // begin6.Paralelepepidning tomonlari berilgan uni hajmini to`la sirtini aniqlang.
+    $a_side = 2;
+    $b_side = 4;
+    $c_side = 5;
+    $V = $a_side * $b_side * $c_side;
+    $S = 2 * ($a_side * $b_side + $b_side * $c_side + $a_side * $c_side);
+    echo "\n ".$V.", ".$S;
+    
+    // begin7.Doiraning radiusi berilgan  uzunligi va yuzasini aniqlang. 
+    $r = 12;
+    echo "\n ".$r * 2 * pi.", ".$r**2 * pi;
+    
+    // begin8.Ikki son berilgan o`rta arifmetigini aniqlang.
+    $A = 10;
+    $B = 26;
+    echo "\n ".($A + $B) / 2;
+
+    // begin9.Ikkita manfiy bo`lmagan sonni o`rta geometrigini toping .
+     echo "\n ".round(sqrt($A * $B));
+     
+     // begin10.Nolga teng bo`lmagan ikki son berilgan yig`indisi ko`p`ytmasi va kvatratlari aniqlansin.
+    echo "\n begin 10 -> $A + $B = ".($A + $B).", $A * $B = ".($A * $B).", $A^2 = ".($A ** 2).", $B^2 = ".($B ** 2);
+?>
+
+
+
